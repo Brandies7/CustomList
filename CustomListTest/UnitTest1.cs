@@ -136,7 +136,26 @@ namespace CustomListTest
             Assert.AreEqual(expectedResult, actualResult);
         }
 
+        [TestMethod]
+
         public void TestMethod8()
+        {
+            CustomList<int> age = new CustomList<int>();
+            age.Add(14);
+            age.Add(12);
+            age.Add(10);
+            age.Add(7);
+            age.Add(3);
+
+            string actualResult = age.ToString();
+            string expectedResult = "14121073";
+
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
+        [TestMethod]
+
+        public void TestMethod9()
         {
             CustomList<int> age = new CustomList<int>();
             age.Add(14);
@@ -146,10 +165,61 @@ namespace CustomListTest
             age.Add(3);
             age.ToString();
 
-            //"1412107"
+            string actualResult = "1";
+            string expectedResult = age[0];
+
+            Assert.AreEqual(expectedResult, actualResult);
         }
+
+        [TestMethod]
+
+        public void TestMethod10()
+        {
+            CustomList<int> age = new CustomList<int>();
+            age.Add(14);
+            age.Add(12);
+            age.Add(10);
+            age.Add(7);
+            age.Add(3);
+            age.ToString();
+           
+            string actualResult = "4";
+            string expectedResult = age[1];
+
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
+        [TestMethod]
+        
+        public void TestMethod11()
+        {
+            CustomList<string> firstName = new CustomList<string>();
+            CustomList<int> age = new CustomList<int>();
+            CustomList<object> kidsAge = new CustomList<object>();
+
+            firstName.Add("Nico");
+            firstName.Add("Autumn");
+            firstName.Add("Bailey");
+            firstName.Add("Summer");
+            firstName.Add("Mason");
+
+            age.Add(14);
+            age.Add(12);
+            age.Add(10);
+            age.Add(7);
+            age.Add(3);
+
+            kidsAge = (firstName + age);
+            
+        }
+
+
     }
 }
+            
+
+           
+
 
 
 
