@@ -19,7 +19,7 @@ namespace CustomListTest
             string expectedResult = ("Nico");
             string actualResult;
 
-            actualResult = [0];
+            actualResult = firstName[0];
 
             Assert.AreEqual(expectedResult, actualResult);
         }
@@ -37,7 +37,7 @@ namespace CustomListTest
             string expectedResult = ("Autumn");
             string actualResult;
 
-            actualResult = [1];
+            actualResult = firstName[1];
 
             Assert.AreEqual(expectedResult, actualResult);
         }
@@ -55,7 +55,7 @@ namespace CustomListTest
             string expectedResult = ("Bailey");
             string actualResult;
 
-            actualResult = [2];
+            actualResult = firstName[2];
 
             Assert.AreEqual(expectedResult, actualResult);
         }
@@ -74,7 +74,7 @@ namespace CustomListTest
             string expectedResult = ("Autumn");
             string actualResult;
 
-            actualResult = [0];
+            actualResult = firstName[0];
 
             Assert.AreEqual(expectedResult, actualResult);
         }
@@ -93,14 +93,33 @@ namespace CustomListTest
             string expectedResult = ("Bailey");
             string actualResult;
 
-            actualResult = [1];
+            actualResult = firstName[1];
 
             Assert.AreEqual(expectedResult, actualResult);
         }
 
         [TestMethod]
 
-        public void TestMethod5()
+        public void TestMethod6()
+        {
+            CustomList<string> firstName = new CustomList<string>();
+            firstName.Add("Nico");
+            firstName.Add("Autumn");
+            firstName.Add("Bailey");
+            firstName.Add("Summer");
+            firstName.Add("Mason");
+            firstName.Remove("Bailey");
+            string expectedResult = ("Summer");
+            string actualResult;
+
+            actualResult = firstName[2];
+
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
+        [TestMethod]
+
+        public void TestMethod7()
         {
             CustomList<string> firstName = new CustomList<string>();
             firstName.Add("Nico");
@@ -112,28 +131,22 @@ namespace CustomListTest
             string expectedResult = ("Mason");
             string actualResult;
 
-            actualResult = [3];
+            actualResult = firstName[3];
 
             Assert.AreEqual(expectedResult, actualResult);
         }
 
-        [TestMethod]
-
-        public void TestMethod5()
+        public void TestMethod8()
         {
-            CustomList<string> firstName = new CustomList<string>();
-            firstName.Add("Nico");
-            firstName.Add("Autumn");
-            firstName.Add("Bailey");
-            firstName.Add("Summer");
-            firstName.Add("Mason");
-            firstName.Remove("Summer");
-            string expectedResult = ("Mason");
-            string actualResult;
+            CustomList<int> age = new CustomList<int>();
+            age.Add(14);
+            age.Add(12);
+            age.Add(10);
+            age.Add(7);
+            age.Add(3);
+            age.ToString();
 
-            actualResult = [3];
-
-            Assert.AreEqual(expectedResult, actualResult);
+            //"1412107"
         }
     }
 }
