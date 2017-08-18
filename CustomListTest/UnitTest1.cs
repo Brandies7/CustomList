@@ -141,14 +141,14 @@ namespace CustomListTest
         public void TestMethod8()
         {
             CustomList<string> age = new CustomList<string>();
-            age.Add("fourteen");
-            age.Add("twelve");
-            age.Add("ten");
-            age.Add("seven");
-            age.Add("three");
+            age.Add("14");
+            age.Add("12");
+            age.Add("10");
+            age.Add("7");
+            age.Add("3");
 
             string actualResult = age.ToString();
-            string expectedResult = "fourteentwelvetenseventhree";
+            string expectedResult = "14121073";
 
             Assert.AreEqual(expectedResult, actualResult);
         }
@@ -158,14 +158,14 @@ namespace CustomListTest
         public void TestMethod9()
         {
             CustomList<int> age = new CustomList<int>();
-            age.Add("fourteen");
-            age.Add("twelve");
-            age.Add("ten");
-            age.Add("seven");
-            age.Add("three");
+            age.Add("14");
+            age.Add("12");
+            age.Add("10");
+            age.Add("7");
+            age.Add("3");
             age.ToString();
 
-            string actualResult = "f";
+            string actualResult = "1";
             string expectedResult = age[0];
 
             Assert.AreEqual(expectedResult, actualResult);
@@ -176,14 +176,14 @@ namespace CustomListTest
         public void TestMethod10()
         {
             CustomList<int> age = new CustomList<int>();
-            age.Add("fourteen");
-            age.Add("twelve");
-            age.Add("ten");
-            age.Add("seven");
-            age.Add("three");
+            age.Add("14");
+            age.Add("12");
+            age.Add("10");
+            age.Add("7");
+            age.Add("3");
             age.ToString();
 
-            string actualResult = "o";
+            string actualResult = "4";
             string expectedResult = age[1];
 
             Assert.AreEqual(expectedResult, actualResult);
@@ -203,12 +203,12 @@ namespace CustomListTest
             firstName.Add("Summer");
             firstName.Add("Mason");
 
-            age.Add("fourteen");
-            age.Add("twelve");
-            age.Add("ten");
-            age.Add("seven");
-            age.Add("three");
-            
+            age.Add("14");
+            age.Add("12");
+            age.Add("10");
+            age.Add("7");
+            age.Add("3");
+
             kidsAge = firstName + age;
 
             string expectedResult = "Bailey";
@@ -232,11 +232,11 @@ namespace CustomListTest
             firstName.Add("Summer");
             firstName.Add("Mason");
 
-            age.Add("fourteen");
-            age.Add("twelve");
-            age.Add("ten");
-            age.Add("seven");
-            age.Add("three");
+            age.Add("14");
+            age.Add("12");
+            age.Add("10");
+            age.Add("7");
+            age.Add("3");
 
             kidsAge = firstName + age;
 
@@ -261,16 +261,16 @@ namespace CustomListTest
             firstName.Add("Summer");
             firstName.Add("Mason");
 
-            age.Add("fourteen");
-            age.Add("twelve");
-            age.Add("ten");
-            age.Add("seven");
-            age.Add("three");
+            age.Add("14");
+            age.Add("12");
+            age.Add("10");
+            age.Add("7");
+            age.Add("3");
 
             kidsAge = firstName + age;
 
-            string expectedResult = "ten";
-            string actualResult = firstName[7];
+            string expectedResult = "10";
+            string actualResult = kidsAge[7];
 
             Assert.AreEqual(expectedResult, actualResult);
 
@@ -280,8 +280,61 @@ namespace CustomListTest
 
         public void TestMethod14()
         {
+            CustomList<string> firstName = new CustomList<string>();
+            CustomList<string> age = new CustomList<string>();
+            CustomList<string> kidsAge = new CustomList<string>();
 
+            firstName.Add("Nico");
+            firstName.Add("Autumn");
+            firstName.Add("Bailey");
+            firstName.Add("Summer");
+            firstName.Add("Mason");
+            firstName.Add("Nico");
+            firstName.Add("Nico");
+
+            age.Add("14");
+            age.Add("12");
+            age.Add("10");
+            age.Add("7");
+            age.Add("3");
+            age.Add("12");
+            age.Add("12");
+
+            kidsAge = firstName + age;
+            kidsAge - ("12");
+            kidsAge - ("Nico");
         }
+
+        [TestMethod]
+
+        public void TestMethod15()
+        {
+            CustomList<string> firstName = new CustomList<string>();
+            CustomList<string> age = new CustomList<string>();
+            CustomList<string> kidsAge = new CustomList<string>();
+
+            firstName.Add("Nico");
+            firstName.Add("Autumn");
+            firstName.Add("Bailey");
+            firstName.Add("Summer");
+            firstName.Add("Mason");
+            firstName.Add("Bailey");
+            firstName.Add("Bailey");
+
+            age.Add("14");
+            age.Add("12");
+            age.Add("10");
+            age.Add("7");
+            age.Add("3");
+            age.Add("10");
+            age.Add("10");
+
+            kidsAge = firstName + age;
+            kidsAge - ("10");
+            kidsAge - ("Bailey");
+        }
+
+
 
     }
 }
