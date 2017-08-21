@@ -17,15 +17,12 @@ namespace CustomListTest
             firstName.Add("Summer");
             firstName.Add("Mason");
             string expectedResult = ("Nico");
-            string actualResult;
-
-            actualResult = firstName[0];
+            string actualResult = firstName[0];
 
             Assert.AreEqual(expectedResult, actualResult);
         }
 
         [TestMethod]
-
         public void TestMethod2()
         {
             CustomList<string> firstName = new CustomList<string>();
@@ -43,7 +40,6 @@ namespace CustomListTest
         }
 
         [TestMethod]
-
         public void TestMethod3()
         {
             CustomList<string> firstName = new CustomList<string>();
@@ -52,16 +48,14 @@ namespace CustomListTest
             firstName.Add("Bailey");
             firstName.Add("Summer");
             firstName.Add("Mason");
-            string expectedResult = ("Bailey");
-            string actualResult;
 
-            actualResult = firstName[2];
+            string expectedResult = ("Bailey");
+            string actualResult = firstName[2];
 
             Assert.AreEqual(expectedResult, actualResult);
         }
 
         [TestMethod]
-
         public void TestMethod4()
         {
             CustomList<string> firstName = new CustomList<string>();
@@ -80,7 +74,6 @@ namespace CustomListTest
         }
 
         [TestMethod]
-
         public void TestMethod5()
         {
             CustomList<string> firstName = new CustomList<string>();
@@ -99,7 +92,6 @@ namespace CustomListTest
         }
 
         [TestMethod]
-
         public void TestMethod6()
         {
             CustomList<string> firstName = new CustomList<string>();
@@ -118,7 +110,6 @@ namespace CustomListTest
         }
 
         [TestMethod]
-
         public void TestMethod7()
         {
             CustomList<string> firstName = new CustomList<string>();
@@ -137,7 +128,6 @@ namespace CustomListTest
         }
 
         [TestMethod]
-
         public void TestMethod8()
         {
             CustomList<string> age = new CustomList<string>();
@@ -154,7 +144,6 @@ namespace CustomListTest
         }
 
         [TestMethod]
-
         public void TestMethod9()
         {
             CustomList<int> age = new CustomList<int>();
@@ -172,7 +161,6 @@ namespace CustomListTest
         }
 
         [TestMethod]
-
         public void TestMethod10()
         {
             CustomList<int> age = new CustomList<int>();
@@ -190,7 +178,6 @@ namespace CustomListTest
         }
 
         [TestMethod]
-
         public void TestMethod11()
         {
             CustomList<string> firstName = new CustomList<string>();
@@ -215,11 +202,9 @@ namespace CustomListTest
             string actualResult = firstName[2];
 
             Assert.AreEqual(expectedResult, actualResult);
-
         }
 
         [TestMethod]
-
         public void TestMethod12()
         {
             CustomList<string> firstName = new CustomList<string>();
@@ -244,11 +229,9 @@ namespace CustomListTest
             string actualResult = firstName[4];
 
             Assert.AreEqual(expectedResult, actualResult);
-
         }
 
         [TestMethod]
-
         public void TestMethod13()
         {
             CustomList<string> firstName = new CustomList<string>();
@@ -273,11 +256,9 @@ namespace CustomListTest
             string actualResult = kidsAge[7];
 
             Assert.AreEqual(expectedResult, actualResult);
-
         }
 
         [TestMethod]
-
         public void TestMethod14()
         {
             CustomList<string> firstName = new CustomList<string>();
@@ -306,7 +287,6 @@ namespace CustomListTest
         }
 
         [TestMethod]
-
         public void TestMethod15()
         {
             CustomList<string> firstName = new CustomList<string>();
@@ -335,7 +315,6 @@ namespace CustomListTest
         }
 
         [TestMethod]
-
         public void TestMethod16()
         {
             CustomList<string> firstName = new CustomList<string>();
@@ -363,7 +342,6 @@ namespace CustomListTest
         }
 
         [TestMethod]
-
         public void TestMethod17()
         {
             CustomList<string> firstName = new CustomList<string>();
@@ -391,7 +369,6 @@ namespace CustomListTest
         }
 
         [TestMethod]
-
         public void TestMethod18()
         {
             CustomList<string> firstName = new CustomList<string>();
@@ -419,16 +396,3 @@ namespace CustomListTest
         }
     }
 }
-
-
-        
-
-            
-
-           
-
-
-
-
-
- 
