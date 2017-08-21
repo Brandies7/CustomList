@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace CustomListProject
 
 {
-    public class CustomList<T>
+    public class CustomList<T> : IEnumerable<T>
     {
         private T[] list;
         public int Count;
@@ -21,33 +23,40 @@ namespace CustomListProject
 
         public void Add(T a)
         {
-           
-
             if (list.Length <= Count)
             {
                 T[] temp = list;
-                list = new T[(Count+1)*2];
+                list = new T[(Count + 1) * 2];
 
                 for (int i = 0; i < temp.Length; i++)
                 {
                     list[i] = temp[i];
-                }
-            }
 
-            
+                    list[Count] = a;
+                    Count++;
+                }
             }
         }
 
-        public void Remove(CustomList<T> a)
+        public void Remove(T a)
         {
-            for (int i = 0; i < a.Count; i++)
-                for (int j = 0; j < a.Count; i++)
-                {
-                    if (i == j)
+            if (list.Length <= Count)
+                for (int i = 0; i < list.Length; i++)
+                    for (int j = 0; j < list.Length; i--)
                     {
-                        i--;
+                        {
+                        }
                     }
-                }
+        }
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            throw new NotImplementedException();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            throw new NotImplementedException();
         }
     }
 }

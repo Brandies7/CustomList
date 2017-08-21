@@ -1,1 +1,9 @@
 C:\Users\adanb\Desktop\devCodeCamp\CustomListProject\CustomListTest\obj\Debug\CustomListTest.csprojResolveAssemblyReference.cache
+C:\Users\adanb\Desktop\devCodeCamp\CustomListProject\CustomListTest\bin\Debug\CustomListTest.dll
+C:\Users\adanb\Desktop\devCodeCamp\CustomListProject\CustomListTest\bin\Debug\CustomListTest.pdb
+C:\Users\adanb\Desktop\devCodeCamp\CustomListProject\CustomListTest\bin\Debug\CustomListProject.exe
+C:\Users\adanb\Desktop\devCodeCamp\CustomListProject\CustomListTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\adanb\Desktop\devCodeCamp\CustomListProject\CustomListTest\bin\Debug\CustomListProject.pdb
+C:\Users\adanb\Desktop\devCodeCamp\CustomListProject\CustomListTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+C:\Users\adanb\Desktop\devCodeCamp\CustomListProject\CustomListTest\obj\Debug\CustomListTest.dll
+C:\Users\adanb\Desktop\devCodeCamp\CustomListProject\CustomListTest\obj\Debug\CustomListTest.pdb
