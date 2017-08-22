@@ -80,7 +80,7 @@ namespace CustomListProject
             return a;
         }
 
-        public void Zip(CustomList<T> b)
+        public void Zip(T b)
         {
             Add(b);
             Array.Sort(list);

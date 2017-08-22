@@ -1,5 +1,9 @@
 ﻿using CustomListProject;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Linq;
+using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace CustomListTest
 {
@@ -281,8 +285,8 @@ namespace CustomListTest
             age.Add("12");
 
             kidsAge = firstName + age;
-            kidsAge--("12");
-            kidsAge--("Nico");
+            kidsAge-"12";
+            kidsAge -"Nico";
         }
 
         [TestMethod]
@@ -311,6 +315,11 @@ namespace CustomListTest
             kidsAge = firstName + age;
             kidsAge-("10");
             kidsAge-("Bailey");
+
+            string expectedResult = "Nico, Autumn, Summer, Mason, 14, 12, 7, 3";
+            string actualResult = kidsAge;
+
+            Assert.AreEqual(actualResult, expectedResult);
         }
 
         [TestMethod]

@@ -1,17 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
+using System.Runtime.InteropServices.ComTypes;
+using System;
+using System.Collections;
+using System.Collections.Generic;   
 
 namespace CustomListProject
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            
+            {
+                CustomList<string> custom = new CustomList<string>();
+                custom.Add();
+                custom.Remove();
+                custom.ToString();
+                custom.Zip();
+                custom.GetEnumerator();
+            }
         }
-        
     }
 }
