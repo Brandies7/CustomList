@@ -40,14 +40,38 @@ namespace CustomListProject
 
         public void Remove(T a)
         {
-            if (list.Length <= Count)
-                for (int i = 0; i < list.Length; i++)
-                    for (int j = 0; j < list.Length; i--)
+            for (int i = 0; i < Count; i++)
+            {
+                int itemCount = 0;
+                if (list[i].Equals(a))
+                {
+                    T[] item = new T[Count - 1];
+                    Count--;
+                    for (int j = 0; j < i; j++)
                     {
-                        {
-                        }
+                        itemCount++;
+                        list[j] = item[j];
                     }
+                    for (int j = i + 1; j < Count + 1; j++)
+                    {
+                        itemCount++;
+                        list[j] = item[i];
+                    }
+                }
+                return;
+            }
         }
+
+        public static CustomList <T> operator + (CustomList<T>a, CustomList<T> b)
+        {
+            foreach (var myItems in b)
+            {
+                a.Add(myItems);
+            }
+            return a;
+        }
+
+
 
         public IEnumerator<T> GetEnumerator()
         {
