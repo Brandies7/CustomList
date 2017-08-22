@@ -222,7 +222,7 @@ namespace CustomListTest
             age.Add("7");
             age.Add("3");
 
-            kidsAge = firstName + age;
+            kidsAge = age + firstName;
 
             string expectedResult = "Mason";
             string actualResult = firstName[4];
@@ -281,8 +281,8 @@ namespace CustomListTest
             age.Add("12");
 
             kidsAge = firstName + age;
-            kidsAge - "12";
-            kidsAge - "Nico";
+            kidsAge--("12");
+            kidsAge--("Nico");
         }
 
         [TestMethod]
@@ -309,8 +309,8 @@ namespace CustomListTest
             age.Add("10");
 
             kidsAge = firstName + age;
-            kidsAge - "10";
-            kidsAge - "Bailey";
+            kidsAge-("10");
+            kidsAge-("Bailey");
         }
 
         [TestMethod]
@@ -332,10 +332,10 @@ namespace CustomListTest
             age.Add("7");
             age.Add("3");
 
-            kidsAge = firstName.Zip(age);
+            firstName.Zip(age);
 
-            string expectedResult = ("Nico"; "14", "Autumn","12", "Bailey", "10", "Summer", "10", "Mason", "3")
-            string actualResult = kidsAge;
+            var expectedResult = "Nico 14 Autumn 12 Bailey 10 Summer 7 Mason 3";
+            var actualResult = kidsAge;
 
             Assert.AreEqual(expectedResult, actualResult);
         }
@@ -359,7 +359,7 @@ namespace CustomListTest
             age.Add("7");
             age.Add("3");
 
-            kidsAge = firstName.Zip(age);
+            firstName.Zip(age);
 
             string expectedResult = "Nico";
             string actualResult = kidsAge[0];
@@ -386,7 +386,7 @@ namespace CustomListTest
             age.Add("7");
             age.Add("3");
 
-            kidsAge = firstName.Zip(age);
+            firstName.Zip(age);
 
             string expectedResult = "12";
             string actualResult = kidsAge[3];

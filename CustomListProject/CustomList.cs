@@ -62,7 +62,7 @@ namespace CustomListProject
             }
         }
 
-        public static CustomList <T> operator + (CustomList<T>a, CustomList<T> b)
+        public static CustomList<T> operator +(CustomList<T> a, CustomList<T> b)
         {
             foreach (var myItems in b)
             {
@@ -71,16 +71,44 @@ namespace CustomListProject
             return a;
         }
 
+        public static CustomList<T> operator -(CustomList<T> a, CustomList<T> b)
+        {
+            foreach (var myItems in b)
+            {
+                a.Remove(myItems);
+            }
+            return a;
+        }
 
+        public void Zip(CustomList<T> b)
+        {
+            Add(b);
+            Array.Sort(list);
+        }
+
+        public override string ToString()
+        {
+            string toString = "[";
+            for (int i = 0; i < Count; i++)
+            {
+                toString = toString + list[i] + ",";
+            }
+            toString = toString.Substring(0, toString.Length - 1);
+            toString += "]";
+            return toString;
+        }
 
         public IEnumerator<T> GetEnumerator()
         {
-            throw new NotImplementedException();
+            for (int i = 0; i < Count; i++)
+            {
+                yield return list[i];
+            }
         }
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            throw new NotImplementedException();
+            return GetEnumerator();
         }
     }
 }
